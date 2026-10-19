@@ -1,0 +1,15 @@
+# 本地运行环境与缓存（包括子目录中的同名文件夹）
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.cache/
+# 官方代码、数据、模型与原始实验输出；GitHub 仅提交精选 examples/。
+vendor/
+data/
+weights/
+*.pth
+*.pt
+*.safetensors
+outputs/
+artifacts/

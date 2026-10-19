@@ -1,0 +1,44 @@
+{
+  "run_id": "20261019T083452.693079Z",
+  "rows": 32,
+  "per_image_rows": 30,
+  "means": 2,
+  "all_saved_arrays_verified": true,
+  "hvi_diagnostics": {
+    "raw_float": {
+      "psnr": 23.843616101318407,
+      "ssim": 0.8580498176946453
+    },
+    "round_8bit": {
+      "psnr": 23.841072803723176,
+      "ssim": 0.8573948850713945
+    },
+    "gt_mean_adjusted_diagnostic_only": {
+      "psnr": 27.726793873101347,
+      "ssim": 0.8759725992812364
+    },
+    "truncate_8bit_official": {
+      "psnr": 23.80916968634138,
+      "ssim": 0.8574016432185425
+    }
+  },
+  "repeat_reference_run_id": "20261019T082847.042636Z",
+  "repeated_runs": {
+    "zero_dce": {
+      "repeated_run_max_abs_pixel_error": 0.0
+    },
+    "hvi_cidnet": {
+      "repeated_run_max_abs_pixel_error": 0.0
+    }
+  },
+  "status": "completed",
+  "acceptance_revision": {
+    "confirmed_by_user": true,
+    "date": "2026-10-19",
+    "hvi_psnr": [
+      23,
+      25
+    ],
+    "gt_mean_correction": false
+  }
+}

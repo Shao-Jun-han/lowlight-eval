@@ -1,0 +1,21 @@
+{
+  "repositories": [
+    {
+      "name": "Zero-DCE",
+      "url": "https://github.com/Li-Chongyi/Zero-DCE.git",
+      "revision": "e0f4adc54d0f23348c4a9b84acc08fe8778d5bfd",
+      "path": "vendor/Zero-DCE"
+    },
+    {
+      "name": "HVI-CIDNet",
+      "url": "https://github.com/Fediory/HVI-CIDNet.git",
+      "revision": "eb43d7d91e9a336c66856824ff9e4603ae41f408",
+      "path": "vendor/HVI-CIDNet"
+    }
+  ],
+  "hvi_weight": {
+    "url": "https://huggingface.co/Fediory/HVI-CIDNet-LOLv1-wperc/resolve/1fa9b6993413a8fe7df1ba433682ccf525349c88/model.safetensors",
+    "path": "weights/hvi_cidnet_lolv1_wperc.safetensors",
+    "sha256": "1163da200c800681dcf5723c92cb9010a0d8e02da32510a10d115d2188104b69"
+  }
+}

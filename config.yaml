@@ -1,0 +1,40 @@
+# 相对路径始终相对于这份配置文件，而不是终端当前目录。
+seed: 42
+device: auto  # auto: 优先 mps，否则 cpu；也可指定 cpu / mps。
+torch_threads: 4
+output_dir: outputs
+cache_dir: .cache/torch
+dataset:
+  name: LOLv1
+  low_dir: ../LOLdataset/eval15/low
+  high_dir: ../LOLdataset/eval15/high
+  expected_pairs: 15
+metrics:
+  lpips_net: alex
+  lpips_device: cpu  # 单独在 CPU 算指标，避免与增强模型争用 MPS 内存。
+  quantize_8bit: false  # 默认直接评测模型 float32 输出；true 时先按 PNG 精度量化。
+timing:
+  warmup: 1
+  max_total_seconds: 300
+sanity:
+  enabled: true
+methods:
+  - name: zero_dce
+    module: methods.zero_dce
+    enabled: true
+    repo_path: vendor/Zero-DCE/Zero-DCE_code
+    weight_path: vendor/Zero-DCE/Zero-DCE_code/snapshots/Epoch99.pth
+    sanity:
+      psnr: [13, 17]
+      ssim: [0.50, 0.65]
+      max_seconds: 1.0
+  - name: hvi_cidnet
+    module: methods.hvi_cidnet
+    enabled: true
+    repo_path: vendor/HVI-CIDNet
+    weight_path: ../model.safetensors
+    sanity:
+      # 2026-10-19 经用户确认：按官方直接推理口径验收，不使用 GT 均值校正。
+      psnr: [23, 25]
+      ssim: [0.85, 0.92]
+      max_seconds: 60.0

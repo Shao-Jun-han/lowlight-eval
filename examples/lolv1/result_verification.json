@@ -1,0 +1,12 @@
+{
+  "run_id": "20261019T083852.418361Z",
+  "status": "completed",
+  "rows": 32,
+  "per_image_rows": 30,
+  "means": 2,
+  "all_saved_arrays_verified": true,
+  "user_weight_sha256": "928bc914bcec03abd6f2b9e057007961845a75e156b0536ba7c41bb4ac817c4c",
+  "user_weight_strict_loading": true,
+  "gt_mean_correction": false,
+  "note": "用户提供的新权重与此前 wperc 权重不同；本样例对应当前配置，原 wperc 结果保存在 examples/lolv1-wperc/。"
+}
